@@ -12,19 +12,18 @@ body{
   background-position: center center;
   background-attachment: fixed;
   width: 100%;
-  height: 100%;
+  height: auto;
   font-family: 'Bitter', serif;  
+  display: flex;
+justify-content: center;
+ align-items: center;
   
 
 
-
 }
-#Profile-Card{
-     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); 
+
+#Profile-Card{ 
+
     background-color: hsla(225, 100%, 40%, 40%);
     border-radius: 5%;
     box-shadow: 5px 10px 25px 25px hsla(0, 0%, 55%, 50%) inset;
@@ -34,11 +33,9 @@ body{
 }
 
   #Profile-Images{
-   
-   perspective: 62.5rem;
    position: relative;
-   
-   
+   perspective: 62.5rem;
+
 
   }
 
@@ -51,17 +48,22 @@ body{
     
     
  
-  #Profile-Images:hover #flip-card{
+  #Profile-Images:hover #flip-card {
      transform: rotateY(180deg);
   }
   #image-front, #image-back{
-    position: absolute;
+   position: absolute;
     
     backface-visibility: hidden;
   }
+#image-front{
+    z-index: 2;
+}
   #image-back{
     transform: rotateY(180deg);
+    z-index: 1;
   }
+
 .black{
     position: relative;
 }
@@ -81,22 +83,14 @@ body{
 .name{
     white-space: nowrap;
 }
-@media(max-width: 850px){
-    #Profile-Card{
-        width: 20rem;
-        height: 25rem;
-    }
-    
-}
 
 
-#About{
-    
-}
+
 @media (min-width: 850px){
     #Profile-Card{
    width: 50rem;
    height: 25rem;
+     
     }
     
     #Profile-Images, #flip-card, img{  
@@ -104,12 +98,16 @@ body{
    height: 18.75rem;
     
 }
+    
 }
 @media(max-width: 850px){
+    
     #Profile-Card{
         width: 20rem;
-        height: 25rem;
-        
+        height: 40rem;
+        display: table-cell;
+       vertical-align: middle;  
+       
         
     }
     
@@ -117,12 +115,14 @@ body{
     #Profile-Images, #flip-card, img {
         width: 15rem;
         height: 16rem;
-        margin-left: auto;
         margin-right: auto;
-    
+        margin-left: auto;
+        display: block; 
         
     }
-
+    #image-black; {
+        margin-top: 0;
+    }
      
     
 }
