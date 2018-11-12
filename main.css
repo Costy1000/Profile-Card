@@ -5,25 +5,23 @@
 }
 
 body{
- 
+ font-family: 'Bitter', serif;  
+  display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
   background-image: url("https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/05/24/Recortada/img_azarzoso_20180528-104057_imagenes_lv_terceros_istock-524620835-kwO-U443797992681P8G-992x558@LaVanguardia-Web.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
   background-attachment: fixed;
-  width: 100%;
-  height: auto;
-  font-family: 'Bitter', serif;  
-  display: flex;
-justify-content: center;
- align-items: center;
   
-
-
+  
+  
 }
 
-#Profile-Card{ 
 
+#Profile-Card{ 
+     
     background-color: hsla(225, 100%, 40%, 40%);
     border-radius: 5%;
     box-shadow: 5px 10px 25px 25px hsla(0, 0%, 55%, 50%) inset;
@@ -70,11 +68,7 @@ justify-content: center;
 .name, .student{
   font-size: 18px;
   color: white;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); 
+  
   
  
   text-align: center;
@@ -104,10 +98,9 @@ justify-content: center;
     
     #Profile-Card{
         width: 20rem;
-        height: 40rem;
-        display: table-cell;
-       vertical-align: middle;  
-       
+        height: 40rem; 
+    
+        
         
     }
     
@@ -120,10 +113,21 @@ justify-content: center;
         display: block; 
         
     }
-    #image-black; {
-        margin-top: 0;
+    
+    
+}
+@media(max-height: 650px){
+    body{
+        height: 150vh;
     }
-     
+    #Profile-Card{
+        width: 20rem;
+        height: 30rem; 
+        
+    
+        
+        
+    }
     
 }
 
