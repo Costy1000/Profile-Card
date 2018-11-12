@@ -12,15 +12,14 @@ body{
   background-position: center center;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  font-family: 'Bitter', serif;  
   
 
 
 
 }
 #Profile-Card{
-     width: 50rem;
-     height: 25rem;
      position: absolute;
     top: 50%;
     left: 50%;
@@ -33,48 +32,98 @@ body{
 
     
 }
-@media(max-width: 850px){
-    #Profile-Card{
-        width: 20rem;
-        height: 25rem;
-    }
-}
 
   #Profile-Images{
-   width: 15.625rem;
-   height: 18.75rem;
+   
    perspective: 62.5rem;
-   float: left;
+   position: relative;
    
    
 
   }
 
   #flip-card{
-   position: relative;
-   width: 100%;
-   height: 18.75rem;
+   
    transition: transform 0.6s;
   transform-style: preserve-3d;
+   
   }
-img{
-    max-width: 15.265rem;
-    max-height: 18.75rem;
     
-}
+    
  
-  #Profile-Images:hover  #flip-card{
+  #Profile-Images:hover #flip-card{
      transform: rotateY(180deg);
   }
   #image-front, #image-back{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    
     backface-visibility: hidden;
   }
   #image-back{
     transform: rotateY(180deg);
   }
+.black{
+    position: relative;
+}
+.name, .student{
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+  
+ 
+  text-align: center;
+    
+}
+.name{
+    white-space: nowrap;
+}
+@media(max-width: 850px){
+    #Profile-Card{
+        width: 20rem;
+        height: 25rem;
+    }
+    
+}
+
+
 #About{
     
 }
+@media (min-width: 850px){
+    #Profile-Card{
+   width: 50rem;
+   height: 25rem;
+    }
+    
+    #Profile-Images, #flip-card, img{  
+    width: 15.265rem;
+   height: 18.75rem;
+    
+}
+}
+@media(max-width: 850px){
+    #Profile-Card{
+        width: 20rem;
+        height: 25rem;
+        
+        
+    }
+    
+   
+    #Profile-Images, #flip-card, img {
+        width: 15rem;
+        height: 16rem;
+        margin-left: auto;
+        margin-right: auto;
+    
+        
+    }
+
+     
+    
+}
+
