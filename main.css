@@ -1,0 +1,273 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, hr, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body{ 
+   /*  display: flex;
+     align-items: center;
+     justify-content: center; */
+     
+     background-image: url("assets/cluj.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+    background-position: center center;
+     background-attachment: fixed;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  
+}
+
+
+#Profile-Card{
+    height: auto;
+    background-color:hsla(210, 100%, 75%, 0.5);
+    border-radius: 5%;
+    box-shadow:  5px 10px 25px 25px hsla(0, 0%, 55%, 0.5) inset; 
+    perspective: 1000px;
+    padding-top: 0.5rem;
+    font-family: 'Bitter', serif;   
+   
+    
+}
+#Profile-Images, #flip-card, img{
+        
+   
+    border-radius: 5%;
+    cursor: pointer;
+   
+
+}
+img{
+   border: 1px solid hsla(0, 0%, 35%, 0.5);  
+}
+
+  #Profile-Images{
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+      
+  }
+
+ 
+
+.name, .student{
+  font-size: 1.125rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+   transform: translate(-50%, -50%);
+  text-align: center;
+ 
+  
+    
+}
+.name{
+    white-space: nowrap;
+} 
+#About-Me{
+    margin-top: 1rem;
+    padding-bottom: 0.2rem;
+}
+#About, #links{
+    width: 100%;
+    font-family: 'Domine', serif;
+}
+#Links{
+    margin-top: 0.2rem;
+}
+
+.border{
+    width: 100%;
+    border: 1px dotted white;
+    
+}
+.column, .column2{
+    background-color: hsla(0, 0%, 0%, 0.3); 
+    text-align: center;
+}
+button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: hsla(0, 0%, 100%, 1);
+    
+}
+#text{
+    
+    background-color:  hsla(0, 0%, 0%, 0.4);
+    display: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    line-height: 1.6;
+    color: hsla(0, 0%, 100%, 0.9);
+    
+    text-shadow: 1px 1px black;
+}
+
+#logos{
+    height: 3.7rem;
+    background-color:  hsla(0, 0%, 0%, 0.3);
+}
+
+.facebook, .instagram{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+}
+.facebook{
+    float: left;
+    margin-left: 1.5rem;
+}
+.instagram{ 
+   float: left;
+  
+    
+}
+
+.gmail{
+    width: 2rem;
+    height: 1.7rem;
+    float: right;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    border: none;
+}
+.facebook:hover, .instagram:hover, .gmail:hover{
+    width: 3.5rem;
+    height: 3rem;
+    transition: .5s ease-in;
+}
+body:hover .facebook, .instagram, .gmail{
+    transition: .5s ease-in;
+}
+a{
+    text-decoration: none;
+    
+}
+a:link{
+    color: #5cd65c;
+}
+a:visited{
+    color: #d279a6;
+}
+a:hover{
+    font-size: 18px;
+    transition: .5s ease-in;
+}
+/*.instagram:hover{
+    width: 3.5rem;
+    height: 3rem;
+    
+} */
+
+ /*========================================================================Desktop===========================================*/
+@media(min-width:650px){
+ #Profile-Card{
+    width: 30rem;
+    
+     position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+   -ms-transform: translate(-50%, -50%);  
+    }
+    
+  #Profile-Images, #flip-card, img{
+    width: 10rem;
+    height: 13rem;
+    }
+    
+
+ 
+  
+
+  
+    .instagram{
+          margin-left: 10.5rem;
+    }
+    
+}
+      /*=======================================================mobile============================================================*/
+@media(max-width: 650px){
+    
+   #Profile-Card{
+    width: 20rem;
+   
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    -ms-transform: translate(-50%, -50%);  
+
+    }
+
+  #Profile-Images, #flip-card, img{
+    width: 10rem;
+    height: 10rem;
+    }
+   
+    .instagram{
+        margin-left: 5.5rem;
+    }   
+}
+
