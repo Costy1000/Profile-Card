@@ -9,7 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">  
   <link href="https://fonts.googleapis.com/css?family=Domine:400,700" rel="stylesheet">  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  
   
   <title>Profile-Card</title>
 </head>
@@ -18,11 +21,11 @@
 <div id="Profile-Card">
   <div id="Profile-Images">
    <div id="flip-card">
-    <div id="image-front">
+    <div class="front">
      <img src= "assets/black.png" alt="black profile-picture" class="black">
      <p class="name">Mihai Constantin</p>
     </div>
-    <div id ="image-back">
+    <div class ="back">
      <img src = "assets/color.png" alt="colorful profile-image" class="color" >
      <p class="student">19 ani</p>
     </div>
@@ -32,7 +35,7 @@
    <div class="column">
      <button id="About-Me">Informatii</button>
    </div>
-      <div id="text"><p>Ma numesc Mihai Constantin si am 19 ani, sunt student la Universitatea <a href="https://ubbcluj.ro/" target="_blank">Babes-Bolyai</a> din Cluj-Napoca, la inceputul anului 2018 am descoperit aceasta pasiune si anume programarea web, de atunci in fiecare zi incerc sa invat ceva nou  si sper ca pe viitor sa o pot transforma intr-o meserie, pe langa programarea web mai am si alte pasiuni cum ar fi sahul, vizionarea filmelor si cititul</p>  
+      <div id="text"><p>Ma numesc Mihai Constantin si am 19 ani, sunt student la Universitatea <a href="https://ubbcluj.ro/" target="_blank">Babes-Bolyai</a> din Cluj-Napoca, la inceputul anului 2018 am descoperit aceasta pasiune si anume programarea web, de atunci in fiecare zi incerc sa invat ceva nou  si sper ca pe viitor sa o pot transforma intr-o meserie, pe langa programarea web mai am si alte pasiuni cum ar fi sahul, vizionarea filmelor si cititul.</p>  
    </div>   
   </div>
   <div class="border"></div>  
@@ -57,7 +60,8 @@
     $("#Links").click(function(){
       $("#logos").slideToggle("slow");  
     });
-   });    
+   });
+   $("#flip-card").flip();
  </script>
 </body>
 

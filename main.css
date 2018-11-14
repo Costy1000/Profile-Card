@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, hr, blockquote, pre,
@@ -53,14 +49,12 @@ table {
    margin: 0;
    padding: 0;
 }
-html, body{
-    height: 100%;
-}
+
 body{ 
    /*  display: flex;
      align-items: center;
      justify-content: center; */
-
+     width: 100%;
      
      background-image: url("https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/05/24/Recortada/img_azarzoso_20180528-104057_imagenes_lv_terceros_istock-524620835-kwO-U443797992681P8G-992x558@LaVanguardia-Web.jpg");
      background-repeat: no-repeat;
@@ -73,24 +67,25 @@ body{
 
 #Profile-Card{
     height: auto;
-    background-color:hsla(210, 100%, 75%, 50%);
+    background-color:hsla(210, 100%, 75%, 0.5);
     border-radius: 5%;
-    box-shadow:  5px 10px 25px 25px hsla(0, 0%, 55%, 50%) inset; 
+    box-shadow:  5px 10px 25px 25px hsla(0, 0%, 55%, 0.5) inset; 
     perspective: 1000px;
     padding-top: 0.5rem;
-  
+    font-family: 'Bitter', serif;   
    
     
 }
 #Profile-Images, #flip-card, img{
         
-   font-family: 'Bitter', serif;   
+   
     border-radius: 5%;
+    cursor: pointer;
    
 
 }
 img{
-   border: 1px solid hsla(0, 0%, 35%, 50%);  
+   border: 1px solid hsla(0, 0%, 35%, 0.5);  
 }
 
   #Profile-Images{
@@ -111,13 +106,13 @@ img{
   left: 50%;
    transform: translate(-50%, -50%);
   text-align: center;
- -moz-visibility: hidden;
+ 
   
     
 }
 .name{
     white-space: nowrap;
-}
+} 
 #About-Me{
     margin-top: 1rem;
     padding-bottom: 0.2rem;
@@ -136,7 +131,7 @@ img{
     
 }
 .column, .column2{
-    background-color: hsla(0, 0%, 0%, 30%); 
+    background-color: hsla(0, 0%, 0%, 0.3); 
     text-align: center;
 }
 button{
@@ -145,24 +140,24 @@ button{
     outline: none;
     cursor: pointer;
     font-size: 20px;
-    color: hsla(0, 0%, 100%, 100%);
+    color: hsla(0, 0%, 100%, 1);
     
 }
 #text{
     
-    background-color:  hsla(0, 0%, 0%, 40%);
+    background-color:  hsla(0, 0%, 0%, 0.4);
     display: none;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     line-height: 1.6;
-    color: hsla(0, 0%, 100%, 90%);
-    font-weight: ease-in;
+    color: hsla(0, 0%, 100%, 0.9);
+    
     text-shadow: 1px 1px black;
 }
 
 #logos{
     height: 3.7rem;
-    background-color:  hsla(0, 0%, 0%, 30%);
+    background-color:  hsla(0, 0%, 0%, 0.3);
 }
 
 .facebook, .instagram{
@@ -237,34 +232,11 @@ a:hover{
     height: 13rem;
     }
     
-    #flip-card{
-    position: relative;
-   transition: transform 0.6s;
-  transform-style: preserve-3d;
-    
+
+ 
   
-   
-  }
- 
- 
-  #Profile-Images:hover #flip-card {
-   
-     transform: rotateY(180deg);
-    
-  }
-  #image-front, #image-back{
-   position: absolute;
-    
-  }
-#image-front{
-    z-index: 2;
-}
-  #image-back{
-   
-    transform: rotateY(180deg);
-   
-    z-index: 1;
-  }
+
+  
     .instagram{
           margin-left: 10.5rem;
     }
@@ -288,19 +260,7 @@ a:hover{
     width: 10rem;
     height: 10rem;
     }
-    #image-back{
-        display: none;
-    }
-    .name{
-        opacity: 0;
-    }
-    #image-front:hover .name{
-        opacity: 10;
-        transition: .7s ease-out;
-    }
-    body:hover  .name{
-     transition: .7s ease-out;   
-    }
+   
     .instagram{
         margin-left: 5.5rem;
     }   
