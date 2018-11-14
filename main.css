@@ -52,7 +52,7 @@ table {
 html, body{
 	 width: 100%;
 	 height: 100%;
-	overflow-y: scroll;
+	
 }
 body{ 
    /*  display: flex;
@@ -68,7 +68,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-   overflow-y: scroll;
+ 
     
   
 }
@@ -223,6 +223,16 @@ a:hover{
     height: 3rem;
     
 } */
+#hidden{
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    
+}
 
  /*========================================================================Desktop===========================================*/
 @media(min-width:650px){
