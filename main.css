@@ -281,11 +281,8 @@ a:hover{
     left: 50%;
     transform: translate(-50%, -50%); 
     -ms-transform: translate(-50%, -50%); */
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    margin-top: 3rem;
-	   margin-bottom: 3rem;
+    
+    
     
 
 
