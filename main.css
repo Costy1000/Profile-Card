@@ -82,7 +82,7 @@ body{
     perspective: 1000px;
     padding-top: 0.5rem;
     font-family: 'Bitter', serif; 
-    overflow-y: hidden;
+    overflow-y: scroll;
    
     
 }
