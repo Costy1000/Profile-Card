@@ -1,15 +1,66 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, hr, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 *{
    box-sizing: border-box;
    margin: 0;
    padding: 0;
 }
-
-body{
- font-family: 'Bitter', serif;  
-     /*display: flex;
+html, body{
+    height: 100%;
+}
+body{ 
+   /*  display: flex;
      align-items: center;
-     justify-content: center;*/
-     height: 100vh;  
+     justify-content: center; */
+
      
      background-image: url("https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/05/24/Recortada/img_azarzoso_20180528-104057_imagenes_lv_terceros_istock-524620835-kwO-U443797992681P8G-992x558@LaVanguardia-Web.jpg");
      background-repeat: no-repeat;
@@ -21,18 +72,19 @@ body{
 
 
 #Profile-Card{
-    
-    background-color: hsla(225, 100%, 40%, 40%);
+    height: auto;
+    background-color:hsla(210, 100%, 75%, 50%);
     border-radius: 5%;
-    box-shadow: 5px 10px 25px 25px hsla(0, 0%, 55%, 50%) inset;
+    box-shadow:  5px 10px 25px 25px hsla(0, 0%, 55%, 50%) inset; 
+    perspective: 1000px;
     padding-top: 0.5rem;
-   
-    
+  
    
     
 }
 #Profile-Images, #flip-card, img{
-    
+        
+   font-family: 'Bitter', serif;   
     border-radius: 5%;
    
 
@@ -43,7 +95,6 @@ img{
 
   #Profile-Images{
    position: relative;
-   perspective: 62.5rem;
    margin-left: auto;
    margin-right: auto;
    display: block;
@@ -60,25 +111,125 @@ img{
   left: 50%;
    transform: translate(-50%, -50%);
   text-align: center;
+ -moz-visibility: hidden;
   
     
 }
 .name{
     white-space: nowrap;
 }
-#About{
-    clear: both;
+#About-Me{
+    margin-top: 1rem;
+    padding-bottom: 0.2rem;
+}
+#About, #links{
+    width: 100%;
+    font-family: 'Domine', serif;
+}
+#Links{
+    margin-top: 0.2rem;
 }
 
+.border{
+    width: 100%;
+    border: 1px dotted white;
+    
+}
+.column, .column2{
+    background-color: hsla(0, 0%, 0%, 30%); 
+    text-align: center;
+}
+button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: hsla(0, 0%, 100%, 100%);
+    
+}
+#text{
+    
+    background-color:  hsla(0, 0%, 0%, 40%);
+    display: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    line-height: 1.6;
+    color: hsla(0, 0%, 100%, 90%);
+    font-weight: ease-in;
+    text-shadow: 1px 1px black;
+}
+
+#logos{
+    height: 3.7rem;
+    background-color:  hsla(0, 0%, 0%, 30%);
+}
+
+.facebook, .instagram{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+}
+.facebook{
+    float: left;
+    margin-left: 1.5rem;
+}
+.instagram{ 
+   float: left;
+  
+    
+}
+
+.gmail{
+    width: 2rem;
+    height: 1.7rem;
+    float: right;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    border: none;
+}
+.facebook:hover, .instagram:hover, .gmail:hover{
+    width: 3.5rem;
+    height: 3rem;
+    transition: .5s ease-in;
+}
+body:hover .facebook, .instagram, .gmail{
+    transition: .5s ease-in;
+}
+a{
+    text-decoration: none;
+    
+}
+a:link{
+    color: #5cd65c;
+}
+a:visited{
+    color: #d279a6;
+}
+a:hover{
+    font-size: 18px;
+    transition: .5s ease-in;
+}
+/*.instagram:hover{
+    width: 3.5rem;
+    height: 3rem;
+    
+} */
+
+ /*========================================================================Desktop===========================================*/
 @media(min-width:650px){
  #Profile-Card{
     width: 30rem;
-    height: 30rem;
+    
      position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%); 
-    
+   -ms-transform: translate(-50%, -50%);  
     }
     
   #Profile-Images, #flip-card, img{
@@ -87,39 +238,50 @@ img{
     }
     
     #flip-card{
-   
+    position: relative;
    transition: transform 0.6s;
   transform-style: preserve-3d;
+    
+  
    
   }
  
  
   #Profile-Images:hover #flip-card {
+   
      transform: rotateY(180deg);
+    
   }
   #image-front, #image-back{
    position: absolute;
-    backface-visibility: hidden;
+    
   }
 #image-front{
     z-index: 2;
 }
   #image-back{
+   
     transform: rotateY(180deg);
+   
     z-index: 1;
   }
- 
+    .instagram{
+          margin-left: 10.5rem;
+    }
     
 }
+      /*=======================================================mobile============================================================*/
 @media(max-width: 650px){
     
    #Profile-Card{
     width: 20rem;
-    height: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 1rem;
+   
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    -ms-transform: translate(-50%, -50%);  
+
     }
 
   #Profile-Images, #flip-card, img{
@@ -136,6 +298,11 @@ img{
         opacity: 10;
         transition: .7s ease-out;
     }
-     
+    body:hover  .name{
+     transition: .7s ease-out;   
+    }
+    .instagram{
+        margin-left: 5.5rem;
+    }   
 }
 

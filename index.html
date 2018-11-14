@@ -2,11 +2,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Domine:400,700" rel="stylesheet">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+  
   <title>Profile-Card</title>
 </head>
 <body>
@@ -25,14 +29,36 @@
    </div>
   </div>
   <div id="About">
-   <div class="column">About Me
+   <div class="column">
+     <button id="About-Me">Informatii</button>
    </div>
-   <div class="informations">
-     <p>dhhgghhg</p>
+      <div id="text"><p>Ma numesc Mihai Constantin si am 19 ani, sunt student la Universitatea <a href="https://ubbcluj.ro/" target="_blank">Babes-Bolyai</a> din Cluj-Napoca, la inceputul anului 2018 am descoperit aceasta pasiune si anume programarea web, de atunci in fiecare zi incerc sa invat ceva nou  si sper ca pe viitor sa o pot transforma intr-o meserie, pe langa programarea web mai am si alte pasiuni cum ar fi sahul, vizionarea filmelor si cititul</p>  
    </div>   
   </div>
+  <div class="border"></div>  
+  <footer id="links">
+      <div class="column2">
+          <button id="Links">Linkuri</button>
+      </div>
+      <div id="logos">
+          <a href="https://web.facebook.com/profile.php?id=100004934898190&ref=bookmarks"><img src="https://en.facebookbrand.com/wp-content/uploads/2016/05/flogo_rgb_hex-brc-site-250.png" alt="facebook" class="facebook"></a>
+          <a href="https://www.instagram.com/costymihai100/"><img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" alt="instagram" class="instagram"></a>
+          <a href="https://accounts.google.com/SignOutOptions?hl=ro&continue=https://mail.google.com/mail&service=mail"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/New_Logo_Gmail.svg/2000px-New_Logo_Gmail.svg.png" alt="gmail" class="gmail"></a>
+      </div>
+  </footer>  
  </div>
-
+ <script>
+   $(document).ready(function(){
+    $("#About-Me").click(function(){
+      $("#text").slideToggle("slow");  
+    });
+   });
+   $(document).ready(function(){
+    $("#Links").click(function(){
+      $("#logos").slideToggle("slow");  
+    });
+   });    
+ </script>
 </body>
 
 </html>
