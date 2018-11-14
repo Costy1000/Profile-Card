@@ -81,7 +81,8 @@ body{
     box-shadow:  5px 10px 25px 25px hsla(0, 0%, 55%, 0.5) inset; 
     perspective: 1000px;
     padding-top: 0.5rem;
-    font-family: 'Bitter', serif;   
+    font-family: 'Bitter', serif; 
+    overflow-y: hidden;
    
     
 }
