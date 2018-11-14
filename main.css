@@ -62,14 +62,14 @@ body{
      background-repeat: no-repeat;
      background-size: cover;
     background-position: center center;
-     background-attachment: fixed;
+     background-attachment: scroll;
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    
   
 }
 
