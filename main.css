@@ -55,10 +55,11 @@ body{
      align-items: center;
      justify-content: center; */
      width: 100%;
-     
+     height: 100%;
      background-image: url("https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/05/24/Recortada/img_azarzoso_20180528-104057_imagenes_lv_terceros_istock-524620835-kwO-U443797992681P8G-992x558@LaVanguardia-Web.jpg");
      background-repeat: no-repeat;
      background-size: cover;
+    background-position: center center;
      background-attachment: fixed;
      
   
