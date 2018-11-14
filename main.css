@@ -243,10 +243,10 @@ a:hover{
 
  /*========================================================================Desktop===========================================*/
 @media(min-width:650px){
-/* #Profile-Card{
+ #Profile-Card{
     width: 30rem;
     
-     position: absolute;
+    /* position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%); 
